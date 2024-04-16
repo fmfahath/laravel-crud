@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -29,5 +30,17 @@ class ProductController extends Controller
         //generate image name
         $imageName = time() . "." . $request->image->extension();
         $request->image->move(public_path('products'), $imageName);
+
+        //create object & upload to database
+        $product = new Product;
+        $product->image = $imageName;
+        $product->name = $request->name;
+        $product->mrp = $request->mrp;
+        $product->price = $request->price;
+        $product->description = $request->description;
+        $product->mrp = $request->mrp;
+
+        $product->save();
+        return back();
     }
 }
