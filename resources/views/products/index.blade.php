@@ -1,4 +1,4 @@
-@extends("layouts.app");
+@extends("layouts.app")
 @section('main')
 <div class="d-flex justify-content-between">
     <h5><i class="bi bi-journal-richtext"></i> Product Details</h5>

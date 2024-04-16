@@ -1,4 +1,4 @@
-@extends("layouts.app");
+@extends("layouts.app")
 @section('main')
 <h5><i class="bi bi-plus-square-fill"></i> Add New Product</h5>
 <hr>
@@ -10,11 +10,12 @@
 </nav>
 
 <div class="col-md-8">
-    <form action="#" method="POST">
+    <form action="/products/store" method="POST" enctype="multipart/form-data">
+        @csrf
         <div class="row mb-3">
             <div class="col-md-12">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" name="name" id="name" class="form-control"
+                <input type="text" name="name" id="name" class="form-control" 
                     placeholder="Enter Product Name">
             </div>
         </div>
