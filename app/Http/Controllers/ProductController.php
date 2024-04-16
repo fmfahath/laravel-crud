@@ -44,4 +44,9 @@ class ProductController extends Controller
         $product->save();
         return back()->withSuccess('Product Details Added Success');
     }
+
+    public function show()
+    {
+        return view('products.show');
+    }
 }
