@@ -41,6 +41,6 @@ class ProductController extends Controller
         $product->mrp = $request->mrp;
 
         $product->save();
-        return back();
+        return back()->withSuccess('Product Details Added Success');
     }
 }
