@@ -15,7 +15,7 @@
         <div class="row mb-3">
             <div class="col-md-12">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" name="name" id="name" class="form-control" 
+                <input type="text" name="name" id="name" class="form-control @if($errors->has('name')) {{'is-invalid'}} @endif" 
                     placeholder="Enter Product Name">
             </div>
         </div>
@@ -23,11 +23,11 @@
         <div class="row mb-3">
             <div class="col-md-6">
                 <label for="mrp" class="form-label">M.R.P</label>
-                <input type="text" name="mrp" id="mrp" class="form-control" placeholder="Enter MRP Price">
+                <input type="text" name="mrp" id="mrp" class="form-control @if($errors->has('mrp')) {{'is-invalid'}} @endif" placeholder="Enter MRP Price">
             </div>
             <div class="col-md-6">
                 <label for="price" class="form-label">Selling Price</label>
-                <input type="text" name="price" id="price" class="form-control"
+                <input type="text" name="price" id="price" class="form-control @if($errors->has('price')) {{'is-invalid'}} @endif"
                     placeholder="Enter Selling Price">
             </div>
         </div>
@@ -35,7 +35,7 @@
         <div class="row mb-3">
             <div class="col-md-12">
                 <label for="description" class="form-label">Product Description</label>
-                <textarea name="description" id="description" class="form-control"
+                <textarea name="description" id="description" class="form-control @if($errors->has('description')) {{'is-invalid'}} @endif"
                     placeholder="Enter Description" style="resize: none; height: 150px;"></textarea>
             </div>
         </div>
@@ -43,7 +43,7 @@
         <div class="row mb-3">
             <div class="col-md-12">
                 <label for="image" class="form-label">Product Image</label>
-                <input type="file" name="image" id="image" class="form-control">
+                <input type="file" name="image" id="image" class="form-control @if($errors->has('image')) {{'is-invalid'}} @endif">
             </div>
         </div>
 
