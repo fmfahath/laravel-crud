@@ -16,19 +16,20 @@
             <div class="col-md-12">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" name="name" id="name" class="form-control @if($errors->has('name')) {{'is-invalid'}} @endif" 
-                    placeholder="Enter Product Name">
+                    placeholder="Enter Product Name" value="{{old('name')}}">
             </div>
         </div>
 
         <div class="row mb-3">
             <div class="col-md-6">
                 <label for="mrp" class="form-label">M.R.P</label>
-                <input type="text" name="mrp" id="mrp" class="form-control @if($errors->has('mrp')) {{'is-invalid'}} @endif" placeholder="Enter MRP Price">
+                <input type="text" name="mrp" id="mrp" class="form-control @if($errors->has('mrp')) {{'is-invalid'}} @endif" 
+                placeholder="Enter MRP Price" value="{{old('mrp')}}">
             </div>
             <div class="col-md-6">
                 <label for="price" class="form-label">Selling Price</label>
                 <input type="text" name="price" id="price" class="form-control @if($errors->has('price')) {{'is-invalid'}} @endif"
-                    placeholder="Enter Selling Price">
+                placeholder="Enter Selling Price" value="{{old('price')}}">
             </div>
         </div>
 
@@ -36,7 +37,7 @@
             <div class="col-md-12">
                 <label for="description" class="form-label">Product Description</label>
                 <textarea name="description" id="description" class="form-control @if($errors->has('description')) {{'is-invalid'}} @endif"
-                    placeholder="Enter Description" style="resize: none; height: 150px;"></textarea>
+                    placeholder="Enter Description" style="resize: none; height: 150px;">{{old('description')}}</textarea>
             </div>
         </div>
 
