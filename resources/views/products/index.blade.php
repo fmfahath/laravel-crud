@@ -27,7 +27,7 @@
                 <td>{{$product->mrp}}</td>
                 <td>{{$product->price}}</td>
                 <td>
-                    <a href="edit.html" class="btn btn-dark btn-sm"><i class="bi bi-pencil-square"></i></a>
+                    <a href="products/edit/{{$product->id}}" class="btn btn-dark btn-sm"><i class="bi bi-pencil-square"></i></a>
                     <a href="#" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></a>
                 </td>
             </tr>

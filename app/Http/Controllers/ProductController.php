@@ -52,4 +52,11 @@ class ProductController extends Controller
         // dd($product);
         return view('products.show', ['product' => $product]);
     }
+
+    public function edit($id)
+    {
+        $product = Product::where('id', $id)->first();
+        // dd($product);
+        return view('products.edit', ['product' => $product]);
+    }
 }
