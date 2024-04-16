@@ -19,8 +19,11 @@
         </thead>
         <tbody>
             @foreach ($products as $product )
+            @php
+                $index = ($products->currentPage() - 1) * $products->perPage() + $loop->iteration;
+            @endphp
             <tr>
-                <td>{{$loop->iteration}}</td>
+                <td>{{$index}}</td>
                 <td><img src="/products/{{$product->image}}" alt="samsung-24"
                         style="width: 50px; height: 50px; object-fit: contain;"></td>
                 <td><a href="products/show/{{$product->id}}">{{$product->name}}</a></td>
