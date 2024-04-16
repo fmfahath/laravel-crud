@@ -21,7 +21,7 @@
             @foreach ($products as $product )
             <tr>
                 <td>{{$loop->iteration}}</td>
-                <td><img src="products/{{$product->image}}" alt="samsung-24"
+                <td><img src="/products/{{$product->image}}" alt="samsung-24"
                         style="width: 50px; height: 50px; object-fit: contain;"></td>
                 <td><a href="products/show/{{$product->id}}">{{$product->name}}</a></td>
                 <td>{{$product->mrp}}</td>
