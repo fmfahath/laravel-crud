@@ -18,42 +18,20 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($products as $product )
             <tr>
-                <td>1</td>
-                <td><img src="images/1.jpeg" alt="samsung-24"
+                <td>{{$loop->iteration}}</td>
+                <td><img src="products/{{$product->image}}" alt="samsung-24"
                         style="width: 50px; height: 50px; object-fit: contain;"></td>
-                <td><a href="show.html">Samsung S24</a></td>
-                <td>320,000/-</td>
-                <td>340,000/-</td>
+                <td><a href="show.html">{{$product->name}}</a></td>
+                <td>{{$product->mrp}}</td>
+                <td>{{$product->price}}</td>
                 <td>
                     <a href="edit.html" class="btn btn-dark btn-sm"><i class="bi bi-pencil-square"></i></a>
                     <a href="#" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></a>
                 </td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td><img src="images/1.jpeg" alt="samsung-24"
-                        style="width: 50px; height: 50px; object-fit: contain;"></td>
-                <td><a href="show.html">Samsung S24</a></td>
-                <td>320,000/-</td>
-                <td>340,000/-</td>
-                <td>
-                    <a href="edit.html" class="btn btn-dark btn-sm"><i class="bi bi-pencil-square"></i></a>
-                    <a href="#" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td><img src="images/1.jpeg" alt="samsung-24"
-                        style="width: 50px; height: 50px; object-fit: contain;"></td>
-                <td><a href="show.html">Samsung S24</a></td>
-                <td>320,000/-</td>
-                <td>340,000/-</td>
-                <td>
-                    <a href="edit.html" class="btn btn-dark btn-sm"><i class="bi bi-pencil-square"></i></a>
-                    <a href="#" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></a>
-                </td>
-            </tr>
+            @endforeach
         </tbody>
     </table>
 </div>
