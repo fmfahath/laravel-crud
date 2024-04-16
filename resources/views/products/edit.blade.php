@@ -10,8 +10,9 @@
 </nav>
 
 <div class="col-md-8">
-    <form action="/products/store" method="POST" enctype="multipart/form-data">
+    <form action="/products/update/{{$product->id}}" method="POST" enctype="multipart/form-data">
         @csrf
+        @method('PUT')
         <div class="row mb-3">
             <div class="col-md-12">
                 <label for="name" class="form-label">Name</label>
