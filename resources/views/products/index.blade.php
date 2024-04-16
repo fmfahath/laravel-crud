@@ -28,7 +28,7 @@
                 <td>{{$product->price}}</td>
                 <td>
                     <a href="products/edit/{{$product->id}}" class="btn btn-dark btn-sm"><i class="bi bi-pencil-square"></i></a>
-                    <a href="#" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></a>
+                    <a href="products/delete/{{$product->id}}" onclick="return confirm('Are you sure want to delete?')" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></a>
                 </td>
             </tr>
             @endforeach
