@@ -20,6 +20,8 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         // dd($request);
+
+        //validation
         $request->validate([
             'name' => 'required',
             'description' => 'required',
@@ -39,14 +41,15 @@ class ProductController extends Controller
         $product->mrp = $request->mrp;
         $product->price = $request->price;
         $product->description = $request->description;
-        $product->mrp = $request->mrp;
 
         $product->save();
         return back()->withSuccess('Product Details Added Success');
     }
 
-    public function show()
+    public function show($id)
     {
-        return view('products.show');
+        $product = Product::where('id', $id)->first();
+        // dd($product);
+        return view('products.show', ['product' => $product]);
     }
 }

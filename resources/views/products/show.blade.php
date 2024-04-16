@@ -10,15 +10,13 @@
 </nav>
 
 <div class="card">
-    <img src="images/1.jpeg" alt="samsung-s24" class="card-img-top">
+    <img src="/products/{{$product->image}}" alt="{{$product->name}}" class="card-img-top">
     <div class="crad-body">
-        <h5 class="card-title fw-bold">Samsung S24</h5>
-        <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis commodi
-            repellendus
-            reiciendis impedit non ullam!</p>
+        <h5 class="card-title fw-bold">{{$product->name}}</h5>
+        <p class="text-secondary">{{$product->description}}</p>
         <p class="fw-semibold">M.R.P <small class="text-danger text-decoration-line-through">Rs.
-                320,000/-</small></p>
-        <p class="fw-semibold">Selling Price <small class="text-success">Rs. 340,000/-</small></p>
+            {{$product->mrp}}</small></p>
+        <p class="fw-semibold">Selling Price <small class="text-success">{{$product->price}}</small></p>
     </div>
 </div>
 @endsection
