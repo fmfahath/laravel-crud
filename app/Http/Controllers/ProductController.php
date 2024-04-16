@@ -25,5 +25,9 @@ class ProductController extends Controller
             'price' => 'required|numeric',
             'image' => 'required|mimes:jpeg,jpg,png,gif|max:1000',
         ]);
+
+        //generate image name
+        $imageName = time() . "." . $request->image->extension();
+        $request->image->move(public_path('products'), $imageName);
     }
 }
